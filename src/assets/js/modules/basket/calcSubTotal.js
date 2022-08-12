@@ -1,5 +1,5 @@
 import replaceCurrency from '../../utils/replaceCurrency';
-import SELECTORS from './selectors';
+import { SELECTORS } from './selectors';
 
 const calcSubTotal = () => {
 	const allPrices = [...document.querySelectorAll(SELECTORS.BASKET_ITEM_PRICE)];

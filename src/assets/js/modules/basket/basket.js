@@ -1,4 +1,4 @@
-import SELECTORS from './selectors';
+import { SELECTORS } from './selectors';
 import toLocaleString from '../../utils/toLocaleString';
 import calcSubTotal from './calcSubTotal';
 import counterActions from './counterActions';

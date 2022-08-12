@@ -1,6 +1,6 @@
 import replaceCurrency from '../../utils/replaceCurrency';
 import toLocaleString from '../../utils/toLocaleString';
-import SELECTORS from './selectors';
+import { SELECTORS } from './selectors';
 
 const actionsPrice = (item, action) => {
 	const itemPrice = item.querySelector(SELECTORS.BASKET_ITEM_PRICE);

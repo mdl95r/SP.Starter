@@ -10,7 +10,7 @@ import { hmrEnabled } from '../config';
 const browserSync = require('browser-sync').create();
 const bundler = webpack(webpackConfig);
 
-let watchFiles = [PATHS.build.styles + '*.css', PATHS.build.html + '/*.html'];
+const watchFiles = [PATHS.build.styles + '*.css', PATHS.build.html + '/*.html'];
 
 if (!hmrEnabled) {
 	watchFiles.push(PATHS.build.scripts + '*.js');
@@ -47,5 +47,6 @@ export default function server() {
 		notify: false,
 		logPrefix: 'SP.Starter',
 		files: watchFiles,
+		port: 9000,
 	});
 }

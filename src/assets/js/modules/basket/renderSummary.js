@@ -1,5 +1,5 @@
 import toLocaleString from '../../utils/toLocaleString';
-import SELECTORS from './selectors';
+import { SELECTORS } from './selectors';
 
 const renderSummary = ({ subTotal, tax, shipping, total }) => {
 	const summaryItems = document.querySelector(SELECTORS.SUMMARY_ITEMS);
