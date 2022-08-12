@@ -9,7 +9,16 @@
 
 // ======= COMPONENTS =======
 @import '../../components/header/header';
+@import '../../components/menu/menu';
+@import '../../components/form/radio/radio';
+@import '../../components/form/checkbox/checkbox';
+@import '../../components/form/input/input';
+@import '../../components/form/input/input-hidden';
+@import '../../components/form/label/label';
+@import '../../components/form/form';
 @import '../../components/button/button';
+@import '../../components/basket/basket';
+@import '../../components/steps-progressbar/steps-progressbar';
 
 // ======= PAGES =======
-@import 'pages/main';
+@import 'pages/billing';

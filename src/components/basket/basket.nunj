@@ -1,0 +1,20 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
+{% macro basket(props) %}
+	<aside class="basket {{ props.className }}">
+		<div class="basket__basket">
+			<h2 class="basket__title">My basket</h2>
+			<ul class="basket__items js-basket-items"></ul>
+		</div>
+
+		<div class="basket__promo">
+			<h2 class="basket__title">Promo code</h2>
+			<form class="basket__form form">
+				<input type="text" placeholder="Placeholder Text" class="form__input">
+				<button class="button button_secondary" type="submit">Apply</button>
+			</form>
+		</div>
+		
+		<ul class="basket__summary-items js-summary-items"></ul>
+	</aside>
+{% endmacro %}

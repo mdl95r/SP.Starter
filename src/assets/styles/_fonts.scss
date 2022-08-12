@@ -1,4 +1,8 @@
 /* Use Google Fonts */
 /* @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic) */
 /* or */
-/* @include font-face("Samplina Neue", "../fonts/SamplinaNeue"); */
+
+// font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg)
+
+@include font-face('Roboto', '../fonts/Roboto-Regular', '400', 'normal', 'woff woff2');
+@include font-face('Roboto', '../fonts/Roboto-Bold', '800', 'normal', 'woff woff2');

@@ -71,9 +71,11 @@
     "prettier": "^2.3.2",
     "raw-loader": "^4.0.2",
     "static-eval": "^2.1.0",
-    "stylelint": "^13.13.1",
+    "stylelint": "^14.8.2",
     "stylelint-config-prettier": "^8.0.2",
+    "stylelint-order": "^5.0.0",
     "stylelint-prettier": "^1.2.0",
+    "stylelint-scss": "^4.3.0",
     "vinyl-named": "^1.1.0",
     "webpack": "^4.42.0",
     "webpack-dev-middleware": "^3.7.2",
@@ -99,7 +101,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npx lint-staged"
     }
   }
 }

@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import initBasket from './modules/basket/basket';
 
 // import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js';
 // gsap.registerPlugin(ScrollToPlugin);
@@ -21,6 +22,7 @@ class ProjectApp {
 		this.modules = {};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
+			initBasket();
 		});
 	}
 }

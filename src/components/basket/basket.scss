@@ -1,0 +1,105 @@
+.basket {
+	display: none;
+
+	@media (min-width: 1200px) {
+		display: block;
+	}
+
+	&__basket {
+		padding: 40px;
+	}
+
+	&__title {
+		font-size: 18px;
+		line-height: 21px;
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		display: flex;
+		position: relative;
+		gap: 0 10px;
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__item-title {
+		font-size: inherit;
+		font-weight: 400;
+		line-height: 16px;
+		margin-bottom: 31px;
+	}
+
+	&__item-info {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item-counters {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 82px;
+	}
+
+	&__item-content {
+		padding-right: 50px;
+	}
+
+	&__item-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		height: 30px;
+
+		.basket__item-icon {
+			width: 20px;
+			height: 20px;
+		}
+
+		&_delete {
+			position: absolute;
+			top: -6px;
+			right: -6px;
+
+			.basket__item-icon {
+				width: 19px;
+				height: 18px;
+			}
+		}
+	}
+
+	&__item-price {
+		margin-left: 25px;
+	}
+
+	&__promo {
+		padding: 40px;
+		border-style: solid;
+		border-color: $color-gray;
+		border-width: 1px 0 1px;
+	}
+
+	&__form {
+		display: flex;
+		gap: 0 10px;
+	}
+
+	&__summary-items {
+		padding: 40px 55px 40px 40px;
+	}
+
+	&__summary-item {
+		display: flex;
+		justify-content: space-between;
+		line-height: 34px;
+
+		&:last-child {
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
+}

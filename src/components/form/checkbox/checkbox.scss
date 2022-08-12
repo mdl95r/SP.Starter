@@ -1,0 +1,45 @@
+.checkbox {
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
+		width: 16px;
+		height: 16px;
+		border: 1px solid $color-gray;
+	}
+
+	&:after {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		content: '';
+		width: 8px;
+		height: 8px;
+		background: $color-blue;
+		opacity: 0;
+	}
+}
+
+.checkbox-group {
+	&__label {
+		position: relative;
+		color: $color-gray-dark2;
+		font-size: 14px;
+		line-height: 16px;
+		padding-left: 30px;
+
+		a {
+			color: $color-black;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__checkbox {
+		position: absolute;
+		left: 0;
+	}
+}

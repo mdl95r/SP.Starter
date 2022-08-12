@@ -1,0 +1,35 @@
+.form {
+	&__label {
+		position: relative;
+		color: #555770;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 24px;
+
+		.tip {
+			position: absolute;
+			top: 6px;
+			left: 63px;
+			width: 13px;
+			height: 13px;
+			color: $color-black;
+			font-size: 10px;
+			letter-spacing: 0.2px;
+			text-align: center;
+			line-height: 14px;
+			border-radius: 50%;
+			background: $color-lightgray2;
+		}
+	}
+
+	&__input {
+		width: 100%;
+
+		&::placeholder {
+			font-family: $font;
+			color: $color-gray-dark;
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+}

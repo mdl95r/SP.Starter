@@ -1,5 +1,30 @@
+{% from "../../components/icon/icon.nunj" import icon %}
+
 <div class="header">
-	<div class="container">
-		{{ menu() }}
+	<div class="container header__wrap">
+		<a href="#">
+			<img src="/assets/images/site-logo.svg" alt="site-logo" class="header__logo">
+		</a>
+		{{ menu({
+			className: 'header__menu'
+		}) }}
+		<div class="header__actions">
+			<button class="header__button header__button_search">
+				{{ icon({
+					iconName: 'search',
+					className: 'header__icon header__icon_search',
+					attributes: 'viewBox="0 0 24 24"'
+				}) }}
+			</button>
+			<button class="header__button header__button_basket">
+				{{ icon({
+					iconName: 'basket',
+					className: 'header__icon header__icon_basket',
+					attributes: 'viewBox="0 0 24 24"'
+				}) }}
+				<span class="header__button_basket-count">2</span>
+			</button>
+			<button class="header__burger js-burger"></button>
+		</div>
 	</div>
 </div>

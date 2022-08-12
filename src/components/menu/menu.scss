@@ -1,0 +1,9 @@
+.menu {
+	&__item {
+		line-height: 16px;
+
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.radio {
+	&:before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		content: '';
+		width: 16px;
+		height: 16px;
+		border: 1px solid $color-gray;
+		border-radius: 50%;
+	}
+
+	&:after {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		content: '';
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: $color-blue;
+		opacity: 0;
+	}
+}
+
+.radio-group {
+	display: flex;
+
+	&__label {
+		position: relative;
+		padding-left: 30px;
+
+		@media (max-width: 991px) {
+			flex: 1 1 50%;
+		}
+
+		@media (min-width: 992px) {
+			&:not(:first-child) {
+				margin-left: 96px;
+			}
+		}
+	}
+
+	&__radio {
+		position: absolute;
+		left: 0;
+	}
+}

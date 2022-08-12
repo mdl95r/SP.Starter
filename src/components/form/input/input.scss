@@ -1,0 +1,19 @@
+input[type='text'] {
+	background: #ededf1;
+	border-radius: 3px;
+	padding: 8px 10px;
+	height: 40px;
+	border: none;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+	&:checked {
+		+ span {
+			&:after {
+				opacity: 1;
+				transition: 0.3s;
+			}
+		}
+	}
+}

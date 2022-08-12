@@ -1,0 +1,88 @@
+.billing {
+	max-width: 1920px;
+	height: 100%;
+	margin: 0 auto;
+
+	.container {
+		padding: 0 80px 60px;
+		margin: 0;
+
+		@media (min-width: 1640px) {
+			max-width: 610px;
+			margin: 0 auto;
+		}
+	}
+
+	&__steps {
+		margin-top: 60px;
+	}
+
+	&__wrapper {
+		display: flex;
+		height: 100%;
+	}
+
+	&__info {
+		flex: 0 1 100%;
+	}
+
+	&__basket {
+		flex: 0 0 410px;
+	}
+
+	&__title {
+		font-size: 18px;
+		line-height: 21px;
+		margin-top: 60px;
+	}
+
+	&__radio-group {
+		margin-top: 43px;
+
+		.radio-group__label {
+			flex: none;
+
+			&:nth-child(2) {
+				margin-left: 82px;
+			}
+		}
+	}
+
+	&__checkbox-group {
+		margin-top: 30px;
+	}
+
+	&__form {
+		.form {
+			&__groups {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 20px 30px;
+				max-width: 550px;
+				padding: 20px 30px 46px;
+				margin: 37px 0 0 -30px;
+				border: 1px solid $color-gray;
+				border-radius: 5px;
+				box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+			}
+
+			&__group {
+				align-self: end;
+
+				&_full-width {
+					grid-column: 1/5;
+				}
+			}
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 41px;
+	}
+
+	&__basket {
+		border-left: 1px solid $color-gray;
+	}
+}

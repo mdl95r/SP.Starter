@@ -1,73 +1,102 @@
 {% extends "../ext/base.nunj" %}
 
 {% from "../../components/menu/menu.nunj" import menu %}
+{% from "../../components/basket/basket.nunj" import basket %}
 {% from "../../components/button/button.nunj" import button %}
-{% from "../../components/icon/icon.nunj" import icon %}
-
-{# Пример расширения существующего блока #}
-{# Например можно использовать для добавления уникальных тайтлов для каждой страницы #}
-{# {% block title %}Home / {{ super() }}{% endblock title %} #}
 
 {% block content %}
 
 	{% include '../../components/header/header.nunj' %}
 
-	<div class="container">
+	<div class="billing">
+		<div class="billing__wrapper">
+			<div class="billing__info">
+				<ul class="billing__steps steps-progressbar">
+					<li class="steps-progressbar__step steps-progressbar__step_complete" data-step="1">Account</li>
+					<li class="steps-progressbar__step steps-progressbar__step_complete" data-step="2">Shipping</li>
+					<li class="steps-progressbar__step steps-progressbar__step_active" data-step="3">Billing</li>
+					<li class="steps-progressbar__step" data-step="4">Review</li>
+				</ul>
 
-		<div style="padding:20px 0;">
-			{{ button({
-				className: '',
-				children: 'Buy something',
-				chevronRight: true
-			}) }}
-		</div>
+				<div class="container">
+					<h1 class="billing__title">Billing Information</h1>
 
-		<div style="padding:20px 0;">
+					<div class="radio-group billing__radio-group">
+						<label class="label radio-group__label">Pay with Credit Card
+							<input class="input-hidden radio-input radio-group__input" type="radio" name="payment" checked>
+							<span class="radio radio-group__radio"></span>
+						</label>
 
-			<h2 style="margin-bottom: 15px;">Пример использования циклов и функции range():</h2>
+						<label class="label radio-group__label"><img src="/assets/images/paypal-logo.svg" alt="paypal">
+							<input class="input-hidden radio-input radio-group__input" type="radio" name="payment">
+							<span class="radio radio-group__radio"></span>
+						</label>
+					</div>
 
-			<div class="row">
-				{% for i in range(1, 13)  %}
-					<span>{{ i }}</span>
-				{% endfor %}
-			</div>
+					<form class="billing__form form">
+						<div class="form__groups">
+							<div class="form__group form__group_full-width">
+								<label class="label form__label" for="card-name">Name on card</label>
+								<input type="text" placeholder="Placeholder Text" class="form__input" id="card-name">
+							</div>
 
-		</div>
+							<div class="form__group">
+								<label class="label form__label" for="card-number">Card number</label>
+								<input type="text" class="form__input" id="card-number">
+							</div>
 
-		<div style="padding:20px 0;">
+							<div class="form__group">
+								<label class="label form__label"></label>
+								<input type="text" class="form__input">
+							</div>
 
-			<h2 style="margin-bottom: 15px;">Пример с переменными:</h2>
+							<div class="form__group">
+								<label class="label form__label"></label>
+								<input type="text" class="form__input">
+							</div>
 
-			{% for item in someData %}
-				<div style="margin-bottom: 15px;">
-					<h3>{{ item.title }}</h3>
-					<p>{{ item.text }}</p>
+							<div class="form__group">
+								<label class="label form__label"></label>
+								<input type="text" class="form__input">
+							</div>
+
+							<div class="form__group">
+								<label class="label form__label" for="expire-card">Expire date</label>
+								<input type="text" class="form__input" id="expire-card">
+							</div>
+
+							<div class="form__group">
+								<label class="label form__label" for="cvv-code">CVV code
+									<div class="tip">?</div>
+								</label>
+								<input type="text" class="form__input" id="cvv-code">
+							</div>
+						</div>
+
+						<div class="checkbox-group billing__checkbox-group">
+							<label class="label checkbox-group__label">Save information of this credit card
+								<input class="input-hidden checkbox-input checkbox-group__input" type="checkbox" checked>
+								<span class="checkbox checkbox-group__checkbox"></span>
+							</label>
+
+							<label class="label checkbox-group__label">I accept the <a href="#">terms and comditions</a> and the <a href="#">Privacy Policies</a>
+								<input class="input-hidden checkbox-input checkbox-group__input" type="checkbox">
+								<span class="checkbox checkbox-group__checkbox"></span>
+							</label>
+						</div>
+
+						<div class="billing__buttons">
+							<button class="button button_primary">Back</button>
+							
+							<button class="button button_secondary" type="submit">Check Out</button>
+						</div>
+					</form>
 				</div>
-			{% endfor %}
-
-		</div>
-
-		{# Пример с функциями #}
-		<p style="margin-bottom: 20px;">{{ addAwesome('Это текст для теста функций') }}</p>
-
-		{% if DEVELOP %}
-			<div class="debug" style="margin-bottom: 20px;">
-				<h2 style="margin-bottom: 15px;">Debug:</h2>
-				<p>Эта информация будет выводиться только при DEVELOP = true.</p>
 			</div>
-		{% endif %}
 
-		<div style="padding:20px 0;">
-
-			<h2 style="margin-bottom: 15px;">Пример использования SVG-спрайта</h2>
-
-			{{ icon({
-				iconName: 'chat',
-				className: 'icon',
-				attributes: 'viewBox="0 0 20 20" style="width: 40px; height: 40px; fill: #212121;"'
+			{{ basket({
+				className: 'billing__basket'
 			}) }}
-
 		</div>
-
 	</div>
 {% endblock content %}
